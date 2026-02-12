@@ -1,0 +1,5 @@
+[
+    { "name": "Beep", "file": "beep.mp3" },
+    { "name": "Boing", "file": "boing.wav" },
+    { "name": "Explosion", "file": "explosion.mp3" }
+]

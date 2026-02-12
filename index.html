@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Soundboard</title>
+
+    <!-- Point all relative paths to your GitHub repo -->
+    <base href="https://cdn.jsdelivr.net/gh/YOUR_USERNAME/YOUR_REPO@main/">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module"></script>
+</head>
+
+<body>
+    <h1>Soundboard</h1>
+
+    <div id="controls">
+        <button id="toggleOverlap">🔇 Overlap: OFF</button>
+        <button id="stopAll">⏹ Stop All</button>
+        <input id="searchInput" type="text" placeholder="Search sounds...">
+    </div>
+
+    <div id="soundboard"></div>
+</body>
+</html>

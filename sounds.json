@@ -1,4 +1,5 @@
 [
     { "name": "Tornado Siren", "file": "soundreality-civil-defense-siren-128262.mp3" },
-    {"Name": "FAAAAH", "file": "faaaaaaaaaaaaaaaaaaaaaaaaaaaaaaart.mp3"}
+    {"name": "FAAAAH", "file": "faaaaaaaaaaaaaaaaaaaaaaaaaaaaaaart.mp3"},
+    { "name": "Music Test", "file": "Am Music Remix.mp3"}
 ]

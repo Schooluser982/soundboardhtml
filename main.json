@@ -6,13 +6,14 @@ const searchInput = document.getElementById("searchInput");
 const toggleOverlap = document.getElementById("toggleOverlap");
 const stopAll = document.getElementById("stopAll");
 
-// Load sound list
-fetch("sound.json")
+// RAW GitHub base URL (no caching issues)
+const RAW_BASE = "https://raw.githubusercontent.com/Schooluser982/soundboardhtml/main/";
+
+fetch(RAW_BASE + "sounds.json")
     .then(res => res.json())
     .then(sounds => {
         createButtons(sounds);
 
-        // Search filter
         searchInput.addEventListener("input", () => {
             const query = searchInput.value.toLowerCase();
             document.querySelectorAll(".sound-button").forEach(btn => {
@@ -22,7 +23,6 @@ fetch("sound.json")
         });
     });
 
-// Create buttons for each sound
 function createButtons(sounds) {
     sounds.forEach(sound => {
         const btn = document.createElement("button");
@@ -36,11 +36,10 @@ function createButtons(sounds) {
     });
 }
 
-// Play sound
 function playSound(file) {
     if (!allowOverlap) stopAllSounds();
 
-    const audio = new Audio(`sounds/${file}`);
+    const audio = new Audio(RAW_BASE + "sounds/" + file);
     activeSounds.push(audio);
     audio.play();
 
@@ -49,7 +48,6 @@ function playSound(file) {
     };
 }
 
-// Stop all sounds
 function stopAllSounds() {
     activeSounds.forEach(a => {
         a.pause();
@@ -58,11 +56,9 @@ function stopAllSounds() {
     activeSounds = [];
 }
 
-// Toggle overlap
 toggleOverlap.addEventListener("click", () => {
     allowOverlap = !allowOverlap;
     toggleOverlap.textContent = allowOverlap ? "🔊 Overlap: ON" : "🔇 Overlap: OFF";
 });
 
-// Stop all button
 stopAll.addEventListener("click", stopAllSounds);

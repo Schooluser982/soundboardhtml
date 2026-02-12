@@ -1,5 +1,3 @@
 [
-    { "name": "Beep", "file": "beep.mp3" },
-    { "name": "Boing", "file": "boing.wav" },
-    { "name": "Explosion", "file": "explosion.mp3" }
+    { "name": "Tornado Siren", "file": "soundreality-civil-defense-siren-128262.mp3" }
 ]
